@@ -7,6 +7,8 @@ internal class Program
         bool gameRunning = true;
         string player1 = "";
         string player2 = "";
+        string currentplayer = player1;
+        char currentSymbol = 'X';
 
         //Making an array of length 9
         char[] board = new char[9];
@@ -36,6 +38,7 @@ internal class Program
             while (string.IsNullOrEmpty(tb.CheckWinner(board, player1, player2)))
             {
 
+                Console.WriteLine("Invalid move. Try again.");
             }
             if (string.IsNullOrEmpty(tb.CheckWinner(board, player1, player2)) == false)
             {
