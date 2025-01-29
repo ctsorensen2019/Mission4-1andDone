@@ -22,7 +22,6 @@ internal class Program
 
         TicTacToe tb = new TicTacToe();
 
-
         //adding numbers as characters to board array
         for (int i = 0; i < board.Length; i++)
         {
@@ -33,10 +32,9 @@ internal class Program
         while (gameRunning)
         {
             tb.PrintBoard(board, player1, player2);
-
-            while (string.IsNullOrEmpty(tb.CheckWinner(board, player1, player2)))
+            while (tb.CheckWinner(board, player1, player2) == false)
             {
-
+                
             }
             if (string.IsNullOrEmpty(tb.CheckWinner(board, player1, player2)) == false)
             {

@@ -16,9 +16,31 @@ public class TicTacToe
         return board;
     }
 
-    public string CheckWinner(char[] board, string player1, string player2)
+}
+	public Boolean CheckWinner(char[] board, string player1, string player2, char currentSymbol)
     {
-        string winner = "";
+        Boolean winner = false;
+
+        for (int i = 0; i < 3; i++)
+        {
+            if (board[i, 0] == board[i, 1] && board[i, 1] == board[i, 2])
+            {
+                winner = true;
+            }
+            if (board[0, i] == board[1, i] && board[1, i] == board[2, i])
+            {
+                winner = true;
+            }
+        }
+        if (board[0] == board[1, 1] && board[1, 1] == board[8])
+        {
+            winner = true;
+        }
+        if (board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0])
+        {
+            winner = true;
+        }
+
         return winner;
     }
 
@@ -66,5 +88,6 @@ public class TicTacToe
             }
         }
     }
+
 
 }
