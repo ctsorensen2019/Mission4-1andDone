@@ -50,39 +50,46 @@ public class TicTacToe
     // 0 4 8
     // 2 4 6
 
-    public bool ValidChoice(string numberChoice, char[] board)
+    public void UpdateBoard(char[] board, char currentSymbol)
     {
-        bool result = true; // Default to a valid guess
+        int index;
+        bool validChoice = false;
 
-        if (numberChoice.Length != 1) // Make sure the user only enters one number
+        while (!validChoice) // Keep asking until a valid choice is made
         {
-            Console.WriteLine("Sorry, the guess has to be only one number. Try again.");
-            return false;
-        }
-        else if (!Char.IsNumber(numberChoice[0])) // Make sure the user enters a number and not something else
-        {
-            Console.WriteLine("Sorry, the guess needs to be a number. Try again.");
-            return false;
-        }
-        else if (board.Contains(numberChoice[0])) // Convert string to char before checking
-        {
-            Console.WriteLine("Sorry, you already guessed that number.");
-            return false;
-        }
+            Console.Write("Enter a number: ");
+            string numberChoice = Console.ReadLine(); // Get user input
 
-        return result;
-    }
-
-    public void UpdateBoard(string numberChoice, char[] board, char currentSymbol)
-    {
-        for (int i = 0; i < board.Length; i++)
-        {
-            if (board[i] == numberChoice[0]) // Compare the board slot with the numberChoice
+            // Ensure valid number input
+            if (!int.TryParse(numberChoice, out index))
             {
-                board[i] = currentSymbol;
+                Console.WriteLine("Invalid input. Please enter a valid number.");
+                continue;
             }
+
+            index -= 1; // Convert 1-based input to 0-based index
+
+            // Check if index is within board range
+            if (index < 0 || index >= board.Length)
+            {
+                Console.WriteLine("Invalid move. Number is out of bounds.");
+                continue;
+            }
+
+            // Check if the position is already occupied
+            if (!char.IsNumber(board[index]))
+            {
+                Console.WriteLine("That spot is already taken! Choose a different number.");
+                continue;
+            }
+
+            // If everything is valid, update the board
+            board[index] = currentSymbol;
+            validChoice = true; // Exit the loop
         }
     }
+
+
 
 
 }
