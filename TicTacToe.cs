@@ -4,6 +4,7 @@ public class TicTacToe
 {
 	public int[] TicBoard(int[] board)
 	{
+		return board;
 	}
 
 	public void Player1(string name)
