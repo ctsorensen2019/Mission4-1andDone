@@ -32,7 +32,7 @@ internal class Program
         //While game is running
         while (gameRunning)
         {
-            tb.PrintBoard(board, player1, player2);
+            tb.PrintBoard(board);
             while (tb.CheckWinner(board, player1, player2) == false)
             {
                 
