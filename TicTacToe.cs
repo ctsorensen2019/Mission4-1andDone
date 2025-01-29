@@ -2,7 +2,7 @@
 
 public class TicTacToe
 {
-	public char[] PrintBoard(char[] board, string player1, string player2)
+	public char[] PrintBoard(char[] board)
 	{
         Console.WriteLine($"\n  {board[0]} | {board[1]} | {board[2]} ");
         Console.WriteLine(" ---+---+---");
