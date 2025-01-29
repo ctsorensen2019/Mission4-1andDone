@@ -11,7 +11,7 @@ public class TicTacToe
         Console.WriteLine($"  {board[6]} | {board[7]} | {board[8]} \n");
     }
 
-	public string CheckWinnter(int[] board, string player1, string player2)
+	public string CheckWinnter(char[] board, string player1, string player2)
 	{
 		string winner = "";
 		return winner;
