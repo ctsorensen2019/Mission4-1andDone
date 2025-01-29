@@ -4,13 +4,12 @@ internal class Program
 {
     public static void Main(string[] args)
     {
+        bool gameRunning = true;
         string player1 = "";
         string player2 = "";
 
         //Making an array of length 9
         char[] board = new char[9];
-
-        TicTacToe tb = new TicTacToe();
 
         //Welcome Message to Players
         Console.WriteLine("Welcome to the Tic-Tac-Toe!");
@@ -21,15 +20,22 @@ internal class Program
         Console.WriteLine("Type the name of Player 2: ");
         player2 = Console.ReadLine();
 
+        TicTacToe tb = new TicTacToe();
+
+
         //adding numbers as characters to board array
         for (int i = 0;i < board.Length; i++)
         {
             board[i] = (i + 1).ToString()[0]; //Filling the board with numbers 1-9 as characters not int
         }
 
-        tb.PrintBoard(board, player1, player2);
+        //While game is running
+        while (gameRunning)
+        {
+            tb.PrintBoard(board, player1, player2);
 
-
+            gameRunning = false;
+        }
 
     }
 }
