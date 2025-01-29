@@ -2,7 +2,7 @@
 
 public class TicTacToe
 {
-	public int[] TicBoard()
+	public int[] TicBoard(int[] board)
 	{
 	}
 
