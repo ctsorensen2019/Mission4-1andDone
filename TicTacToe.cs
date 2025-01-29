@@ -1,4 +1,4 @@
-﻿namespace Mission4-1andDone;
+﻿namespace Mission4;
 
 public class TicTacToe
 {
@@ -11,7 +11,7 @@ public class TicTacToe
 		Console.WriteLine($"  {board[6]} | {board[7]} | {board[8]} \n");
 	}
 
-	public string CheckWinnter(int[] board, string player1, string player2)
+	public string CheckWinner(char[] board, string player1, string player2)
 	{
 		string winner = "";
 		return winner;
