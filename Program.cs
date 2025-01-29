@@ -24,7 +24,7 @@ internal class Program
 
 
         //adding numbers as characters to board array
-        for (int i = 0;i < board.Length; i++)
+        for (int i = 0; i < board.Length; i++)
         {
             board[i] = (i + 1).ToString()[0]; //Filling the board with numbers 1-9 as characters not int
         }
@@ -34,10 +34,11 @@ internal class Program
         {
             tb.PrintBoard(board, player1, player2);
 
-        while (string.IsNullOrEmpty(tb.CheckWinner(board,player1,player2)))
-        {
+            while (string.IsNullOrEmpty(tb.CheckWinner(board, player1, player2)))
+            {
+
+            }
 
         }
-
     }
 }
