@@ -8,7 +8,12 @@ public class TicTacToe
         Console.WriteLine(" ---+---+---");
         Console.WriteLine("  ${board[3]} | ${board[4]} | ${board[5]} ");
         Console.WriteLine(" ---+---+---");
-        Console.WriteLine("  ${board[6]} | ${board[7]} | ${board[8]} \n");
+        Console.WriteLine("  ${board[6]} | ${board[7]} | ${board[8]} \n"); 
+    }
+
+    public void CheckWinner(char[] board, string player1, string player2)
+    {
+        Console.WriteLine("");
     }
 
 }
