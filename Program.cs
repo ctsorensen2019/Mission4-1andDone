@@ -7,6 +7,7 @@ internal class Program
         bool gameRunning = true;
         string player1 = "";
         string player2 = "";
+        string currentplayer = player1;
         char currentSymbol = 'X';
 
         //Making an array of length 9
