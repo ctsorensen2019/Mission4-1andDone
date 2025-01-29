@@ -22,7 +22,6 @@ internal class Program
 
         TicTacToe tb = new TicTacToe();
 
-
         //adding numbers as characters to board array
         for (int i = 0; i < board.Length; i++)
         {
