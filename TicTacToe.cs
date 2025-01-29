@@ -1,15 +1,10 @@
-﻿namespace Mission4-1andDone;
+﻿namespace TicTacToe;
 
 public class TicTacToe
 {
-	public int[] PrintBoard(int[] board, string player1, string player2)
+	public int[] TicBoard(int[] board)
 	{
 		return board;
 	}
 
-    public string CheckWinner(int[] board, string player1, string player2)
-    {
-        string winner = "";
-        return winner;
-    }
 }

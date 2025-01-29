@@ -10,6 +10,8 @@ internal class Program
         //Making an array of length 9
         char[] board = new char[9];
 
+        TicTacToe tb = new TicTacToe();
+
         //Welcome Message to Players
         Console.WriteLine("Welcome to the Tic-Tac-Toe!");
         Console.WriteLine("Player 1 will use 'X' and Player 2 will use 'O'.\n");
@@ -24,8 +26,6 @@ internal class Program
         {
             board[i] = (i + 1).ToString()[0]; //Filling the board with numbers 1-9 as characters not int
         }
-
-        TicTacToe tb = new TicTacToe();
 
         tb.PrintBoard(board, player1, player2);
 
