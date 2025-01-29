@@ -1,4 +1,4 @@
-﻿using TicTacToe;
+﻿using Mission4-1andDone;
 
 internal class Program
 {
@@ -23,5 +23,12 @@ internal class Program
         {
             board[i] = (i + 1).ToString()[0]; //Filling the board with numbers 1-9 as characters not int
         }
+
+        TicTacToe tb = new TicTacToe();
+
+        tb.PrintBoard(board, player1, player2);
+
+
+
     }
 }

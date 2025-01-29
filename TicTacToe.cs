@@ -1,19 +1,16 @@
-﻿using System;
+﻿namespace Mission4-1andDone;
 
 public class TicTacToe
 {
 	public int[] TicBoard(int[] board)
 	{
+		return board;
 	}
 
-	public void Player1(string name)
-	{
-		
-	}
-
-    public void Player2(string name)
+    public string CheckWinner(int[] board, string player1, string player2)
     {
-
+        string winner = "";
+        return winner;
     }
 }
 //WAYS TO WIN
