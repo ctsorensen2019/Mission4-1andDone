@@ -6,6 +6,7 @@ internal class Program
     {
         string player1 = "";
         string player2 = "";
+        string winner = "";
         string currentplayer = player1;
         char currentSymbol = 'X';
 
@@ -30,15 +31,22 @@ internal class Program
 
         //While game is running
                   
-            while (tb.CheckWinner(board, player1, player2) == false)
-            {
-                tb.PrintBoard(board);
-            }
-            if (string.IsNullOrEmpty(tb.CheckWinner(board, player1, player2)) == false)
-            {
-                gameRunning = false;
-            }
-
+        while (tb.CheckWinner(board, currentSymbol) == false)
+        {
+            tb.PrintBoard(board);
         }
+        if (tb.CheckWinner(board, currentSymbol) == true)
+        {
+            if (currentSymbol == 'X') {
+                winner = player1;
+            }else
+            {
+                winner = player2;
+            }
+            Console.WriteLine($"The winner is {winner}");
+            Environment.Exit(0);
+        }
+
     }
+}
 

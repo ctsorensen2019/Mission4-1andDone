@@ -13,7 +13,7 @@ public class TicTacToe
         Console.WriteLine($"  {board[6]} | {board[7]} | {board[8]} \n");
     }
 
-	public Boolean CheckWinner(char[] board, string player1, string player2, char currentSymbol)
+	public Boolean CheckWinner(char[] board, char currentSymbol)
 	{
 		Boolean winner = false;
 
