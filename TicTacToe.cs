@@ -1,12 +1,23 @@
-﻿namespace Mission4-1andDone;
+﻿namespace Mission4;
 
 public class TicTacToe
 {
-	public int[] TicBoard(int[] board)
+	public char[] PrintBoard(char[] board, string player1, string player2)
 	{
+        Console.WriteLine($"\n  {board[0]} | {board[1]} | {board[2]} ");
+        Console.WriteLine(" ---+---+---");
+        Console.WriteLine($"  {board[3]} | {board[4]} | {board[5]} ");
+        Console.WriteLine(" ---+---+---");
+        Console.WriteLine($"  {board[6]} | {board[7]} | {board[8]} \n");
 		return board;
-	}
+    }
 
+	public string CheckWinner(char[] board, string player1, string player2)
+	{
+		string winner = "";
+		return winner;
+	}
+}
     public string CheckWinner(int[] board, string player1, string player2)
     {
         string winner = "";
