@@ -23,8 +23,5 @@ internal class Program
         {
             board[i] = (i + 1).ToString()[0]; //Filling the board with numbers 1-9 as characters not int
         }
-
-
-
     }
 }
