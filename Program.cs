@@ -4,7 +4,6 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        bool gameRunning = true;
         string player1 = "";
         string player2 = "";
         string currentplayer = player1;
@@ -30,12 +29,10 @@ internal class Program
         }
 
         //While game is running
-        while (gameRunning)
-        {
-            tb.PrintBoard(board);
+                  
             while (tb.CheckWinner(board, player1, player2) == false)
             {
-                
+                tb.PrintBoard(board);
             }
             if (string.IsNullOrEmpty(tb.CheckWinner(board, player1, player2)) == false)
             {
@@ -44,4 +41,4 @@ internal class Program
 
         }
     }
-}
+
