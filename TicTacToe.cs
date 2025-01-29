@@ -3,9 +3,7 @@
 public class TicTacToe
 {
 
-    //public int[] TicBoard(int[] board)
-
-    public char[] PrintBoard(char[] board, string player1, string player2)
+    public void PrintBoard(char[] board)
 
     {
         Console.WriteLine($"\n  {board[0]} | {board[1]} | {board[2]} ");
@@ -13,10 +11,8 @@ public class TicTacToe
         Console.WriteLine($"  {board[3]} | {board[4]} | {board[5]} ");
         Console.WriteLine(" ---+---+---");
         Console.WriteLine($"  {board[6]} | {board[7]} | {board[8]} \n");
-        return board;
     }
 
-}
 	public Boolean CheckWinner(char[] board, string player1, string player2, char currentSymbol)
 	{
 		Boolean winner = false;
