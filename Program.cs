@@ -34,11 +34,9 @@ internal class Program
         while (gameRunning)
         {
             tb.PrintBoard(board, player1, player2);
-
-            while (string.IsNullOrEmpty(tb.CheckWinner(board, player1, player2)))
+            while (tb.CheckWinner(board, player1, player2) == false)
             {
-
-                Console.WriteLine("Invalid move. Try again.");
+                
             }
             if (string.IsNullOrEmpty(tb.CheckWinner(board, player1, player2)) == false)
             {
