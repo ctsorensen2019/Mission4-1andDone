@@ -38,6 +38,10 @@ internal class Program
             {
 
             }
+            if (string.IsNullOrEmpty(tb.CheckWinner(board, player1, player2)) == false)
+            {
+                gameRunning = false;
+            }
 
         }
     }
