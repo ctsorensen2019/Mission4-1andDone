@@ -1,4 +1,4 @@
-﻿using Mission4-1andDone;
+﻿using Mission4;
 
 internal class Program
 {
@@ -29,7 +29,10 @@ internal class Program
 
         tb.PrintBoard(board, player1, player2);
 
+        while (string.IsNullOrEmpty((tb.CheckWinner(board,player1,player2))))
+        {
 
+        }
 
     }
 }
