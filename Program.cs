@@ -4,9 +4,9 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        bool gameRunning = true;
         string player1 = "";
         string player2 = "";
+        string winner = "";
         string currentplayer = player1;
         char currentSymbol = 'X';
 
@@ -30,18 +30,23 @@ internal class Program
         }
 
         //While game is running
-        while (gameRunning)
+                  
+        while (tb.CheckWinner(board, currentSymbol) == false)
         {
             tb.PrintBoard(board);
-            while (tb.CheckWinner(board, player1, player2) == false)
-            {
-                
-            }
-            if (string.IsNullOrEmpty(tb.CheckWinner(board, player1, player2)) == false)
-            {
-                gameRunning = false;
-            }
-
         }
+        if (tb.CheckWinner(board, currentSymbol) == true)
+        {
+            if (currentSymbol == 'X') {
+                winner = player1;
+            }else
+            {
+                winner = player2;
+            }
+            Console.WriteLine($"The winner is {winner}");
+            Environment.Exit(0);
+        }
+
     }
 }
+
