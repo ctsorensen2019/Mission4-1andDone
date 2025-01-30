@@ -24,10 +24,18 @@ public class TicTacToe
             { 0, 4, 8 }, { 2, 4, 6 } // Diagonals
         };
 
-            foreach (var combo in winningCombinations)
+            for (int i = 0; i < winningCombinations.GetLength(0); i++)
             {
-                if (board[combo[0]] == board[combo[1]] && board[combo[1]] == board[combo[2]])
+                int a = winningCombinations[i, 0];
+                int b = winningCombinations[i, 1];
+                int c = winningCombinations[i, 2];
+
+                if (board[a] == currentSymbol &&
+                    board[b] == currentSymbol &&
+                    board[c] == currentSymbol)
+                {
                     winner = true;
+                }
             }
 
         }
