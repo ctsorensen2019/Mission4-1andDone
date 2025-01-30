@@ -34,12 +34,16 @@ internal class Program
         while (tb.CheckWinner(board, currentSymbol) == false)
         {
             tb.PrintBoard(board);
+            Console.WriteLine($"It's {(currentSymbol == 'X' ? player1 : player2)}'s turn: ");
+            tb.UpdateBoard(board, currentSymbol);
+            currentSymbol = (currentSymbol == 'X') ? 'O' :  'X';
         }
         if (tb.CheckWinner(board, currentSymbol) == true)
         {
-            if (currentSymbol == 'X') {
+            if (currentSymbol == 'O') {
                 winner = player1;
-            }else
+            }
+            else
             {
                 winner = player2;
             }
