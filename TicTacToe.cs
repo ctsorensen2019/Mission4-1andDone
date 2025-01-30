@@ -23,13 +23,14 @@ public class TicTacToe
             { 0, 3, 6 }, { 1, 4, 7 }, { 2, 5, 8 }, // Columns
             { 0, 4, 8 }, { 2, 4, 6 } // Diagonals
         };
-
+            // Updated logic to allow you to pull array combinations from winningCombinations
             for (int i = 0; i < winningCombinations.GetLength(0); i++)
             {
                 int a = winningCombinations[i, 0];
                 int b = winningCombinations[i, 1];
                 int c = winningCombinations[i, 2];
-
+                
+                // Compares symbol placement to winning locations
                 if (board[a] == currentSymbol &&
                     board[b] == currentSymbol &&
                     board[c] == currentSymbol)

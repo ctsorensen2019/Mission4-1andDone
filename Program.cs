@@ -36,20 +36,32 @@ internal class Program
         while (tb.CheckWinner(board, currentSymbol) == false)
         {
             tb.PrintBoard(board);
+            
+            // Next players turn. Updates board with their choice.
             Console.WriteLine($"It's {(currentSymbol == 'X' ? player1 : player2)}'s turn: ");
             tb.UpdateBoard(board, currentSymbol);
+            
+            // Ends the game before another switch can occur
+            if (tb.CheckWinner(board, currentSymbol)) 
+            {
+                break;                               
+            }
+            // Switches player1 to player 2 and vice versa
             currentSymbol = (currentSymbol == 'X') ? 'O' :  'X';
         }
         if (tb.CheckWinner(board, currentSymbol) == true)
         {
-            if (currentSymbol == 'O') {
+            if (currentSymbol == 'X') {
                 winner = player1;
             }
             else
             {
                 winner = player2;
             }
+            
+            // Prints the winner and final game board
             Console.WriteLine($"The winner is {winner}");
+            tb.PrintBoard(board);
             Environment.Exit(0);
         }
 
