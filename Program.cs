@@ -46,6 +46,11 @@ internal class Program
             {
                 break;                               
             }
+            
+            if (tb.IsBoardFull(board))
+            {
+                break;
+            }
             // Switches player1 to player 2 and vice versa
             currentSymbol = (currentSymbol == 'X') ? 'O' :  'X';
         }
@@ -61,6 +66,12 @@ internal class Program
             
             // Prints the winner and final game board
             Console.WriteLine($"The winner is {winner}");
+            tb.PrintBoard(board);
+            Environment.Exit(0);
+        }
+        else
+        {
+            Console.WriteLine("It's a draw!");
             tb.PrintBoard(board);
             Environment.Exit(0);
         }

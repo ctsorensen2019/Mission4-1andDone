@@ -54,6 +54,18 @@ public class TicTacToe
     // 2 5 8
     // 0 4 8
     // 2 4 6
+    
+    public bool IsBoardFull(char[] board)
+    {
+        foreach (char spot in board)
+        {
+            if (char.IsDigit(spot))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 
     public void UpdateBoard(char[] board, char currentSymbol)
     {
